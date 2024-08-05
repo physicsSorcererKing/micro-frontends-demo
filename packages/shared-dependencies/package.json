@@ -1,0 +1,9 @@
+{
+  "name": "@psk/shared-dependencies",
+  "scripts": {
+    "serve": "serve src/ -l 9001 --cors"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

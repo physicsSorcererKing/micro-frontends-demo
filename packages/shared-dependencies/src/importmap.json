@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/6.0.1/es2015/system/single-spa.min.js"
+  }
+}

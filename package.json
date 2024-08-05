@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
-    "root-config": "pnpm --filter @psk/root-config"
+    "root-config": "pnpm --filter @psk/root-config",
+    "shared-dependencies": "pnpm --filter @psk/shared-dependencies"
   },
   "devDependencies": {
     "husky": "^9.1.4"
