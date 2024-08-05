@@ -1,7 +1,7 @@
 {
   "name": "@psk/root-config",
   "scripts": {
-    "start": "webpack serve --port 9000 --env isLocal",
+    "start": "webpack serve --env isLocal",
     "lint": "eslint src --ext js,ts",
     "lint-staged": "lint-staged",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",

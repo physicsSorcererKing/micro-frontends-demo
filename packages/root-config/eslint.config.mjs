@@ -9,4 +9,10 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
+  {
+    rules: {
+      "no-undef": 0,
+      "@typescript-eslint/no-require-imports": 0,
+    },
+  },
 ];
