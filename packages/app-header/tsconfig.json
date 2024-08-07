@@ -5,6 +5,6 @@
     "declarationDir": "dist",
     "types": ["@testing-library/jest-dom"]
   },
-  "files": ["src/psk-app-header.tsx"],
+  "files": ["src/psk-app-header-react.tsx"],
   "include": ["src/**/*"]
 }

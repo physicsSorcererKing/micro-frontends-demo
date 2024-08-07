@@ -6,7 +6,7 @@
     "prepare": "husky",
     "root-config": "pnpm --filter @psk/root-config",
     "shared-dependencies": "pnpm --filter @psk/shared-dependencies",
-    "app-header": "pnpm --filter @psk/app-header"
+    "header": "pnpm --filter @psk/app-header-react"
   },
   "devDependencies": {
     "husky": "^9.1.4"
