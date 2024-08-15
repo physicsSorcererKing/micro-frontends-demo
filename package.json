@@ -6,7 +6,8 @@
     "prepare": "husky",
     "root-config": "pnpm --filter @psk/root-config",
     "shared-dependencies": "pnpm --filter @psk/shared-dependencies",
-    "header": "pnpm --filter @psk/app-header-react"
+    "header": "pnpm --filter @psk/app-header-react",
+    "nav": "pnpm --filter @psk/app-nav-vue"
   },
   "devDependencies": {
     "husky": "^9.1.4"
