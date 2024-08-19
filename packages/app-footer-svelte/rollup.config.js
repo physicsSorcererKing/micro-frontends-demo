@@ -33,10 +33,6 @@ export default {
     }),
     commonjs(),
 
-    // In dev mode, call `npm run start` once
-    // the bundle has been generated
-    !production && serve(),
-
     // Watch the `dist` directory and refresh the
     // browser on changes when not in production
     !production && livereload("dist"),
@@ -50,19 +46,23 @@ export default {
   },
 };
 
-function serve() {
-  let started = false;
-
-  return {
-    writeBundle() {
-      if (!started) {
-        started = true;
-
-        require("child_process").spawn("npm", ["run", "serve", "--", "--dev"], {
-          stdio: ["ignore", "inherit", "inherit"],
-          shell: true,
-        });
-      }
-    },
-  };
-}
+// function start() {
+//   let started = false;
+//
+//   return {
+//     writeBundle() {
+//       if (!started) {
+//         started = true;
+//
+//         require("child_process").spawn(
+//           "pnpm",
+//           ["run", "serve", "--", "--dev"],
+//           {
+//             stdio: ["ignore", "inherit", "inherit"],
+//             shell: true,
+//           }
+//         );
+//       }
+//     },
+//   };
+// }
