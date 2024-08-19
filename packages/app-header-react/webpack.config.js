@@ -9,7 +9,14 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   });
 
+  const externals = [];
+
+  if (webpackConfigEnv.standalone) {
+    externals.push("react", "react-dom");
+  }
+
   return merge(defaultConfig, {
+    externals,
     devServer: {
       port: 9010,
       headers: {

@@ -2,7 +2,7 @@ const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-require("dotenv").config();
+require("dotenv").config({ path: [".env.local", ".env"] });
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "psk";
