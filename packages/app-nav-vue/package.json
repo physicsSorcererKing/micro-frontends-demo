@@ -2,9 +2,10 @@
   "name": "@psk/app-nav-vue",
   "version": "0.0.0",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "start:standalone": "cross-env NODE_ENV=development STANDALONE_SINGLE_SPA=true webpack-dev-server --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development STANDALONE_SINGLE_SPA=true webpack-dev-server --config webpack.config.js",
+    "dev:i": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production STANDALONE_SINGLE_SPA=true webpack --config webpack.config.js",
+    "build:i": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "preview": "serve dist/ -l 9020 --cors",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
