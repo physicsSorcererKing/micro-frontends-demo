@@ -1,10 +1,10 @@
 {
   "name": "@psk/app-footer-svelte",
   "scripts": {
+    "dev": "pnpm build && pnpm serve",
     "build": "concurrently pnpm:build:*",
     "build:rollup": "rollup -c",
     "serve": "sirv dist -c -p 9040",
-    "start": "pnpm build && pnpm serve",
     "test": "jest",
     "format": "prettier --write --plugin-search-dir=. .",
     "check-format": "prettier --plugin-search-dir=. --check ."
@@ -12,26 +12,26 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/svelte": "^3.2.2",
-    "@types/node": "^20.14.5",
-    "babel-jest": "^27.5.1",
-    "concurrently": "^6.5.1",
-    "jest": "^27.5.1",
-    "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.1",
-    "rollup": "^2.79.1",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/svelte": "^5.2.1",
+    "@types/node": "^20.14.15",
+    "babel-jest": "^29.7.0",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.6",
+    "rollup": "^4.21.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.2.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.59.2",
-    "svelte-jester": "^2.3.2",
+    "svelte": "^4.2.18",
+    "svelte-jester": "^5.0.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
     "single-spa-svelte": "^2.1.1",
-    "sirv-cli": "^1.0.14"
+    "sirv-cli": "^2.0.2"
   }
 }
