@@ -31,7 +31,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: [{ loader: 'vue-loader' }, { loader: 'vue-svg-inline-loader' }],
+        use: [{ loader: 'vue-loader' }],
         include: [resolve('src')],
         exclude: /node_modules/
       },
@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        use: ['vue-loader', resolve('src/svg-to-vue.js')]
       },
       {
         test: /\.tsx?$/,
@@ -52,6 +52,10 @@ module.exports = {
         },
         include: [resolve('src')],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader'
       }
     ]
   },
