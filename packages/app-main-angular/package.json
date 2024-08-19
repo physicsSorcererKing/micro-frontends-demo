@@ -7,6 +7,7 @@
     "dev:origin": "ng serve --port 9030",
     "build": "ng build --project app-main-angular --configuration production",
     "build:origin": "ng build",
+    "serve": "serve dist -l 9030 --cors",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -38,6 +39,7 @@
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "serve": "^14.2.3",
     "style-loader": "^3.3.4",
     "typescript": "~5.5.4"
   }

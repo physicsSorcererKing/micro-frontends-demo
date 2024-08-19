@@ -6,7 +6,7 @@
     "dev:i": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
     "build": "cross-env NODE_ENV=production STANDALONE_SINGLE_SPA=true webpack --config webpack.config.js",
     "build:i": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "preview": "serve dist/ -l 9020 --cors",
+    "serve": "serve dist -l 9020 --cors",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -36,6 +36,7 @@
     "html-webpack-plugin": "^5.6.0",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
+    "serve": "^14.2.3",
     "standalone-single-spa-webpack-plugin": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "~5.4.0",

@@ -3,12 +3,15 @@
   "author": "physicsSorcererKing",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky",
+    "build:all": "pnpm -r --parallel build",
+    "serve:all": "pnpm -r --parallel serve",
     "root-config": "pnpm --filter @psk/root-config",
     "shared-dependencies": "pnpm --filter @psk/shared-dependencies",
     "header": "pnpm --filter @psk/app-header-react",
     "nav": "pnpm --filter @psk/app-nav-vue",
-    "main": "pnpm --filter @psk/app-main-angular"
+    "main": "pnpm --filter @psk/app-main-angular",
+    "footer": "pnpm --filter @psk/app-footer-svelte",
+    "prepare": "husky"
   },
   "devDependencies": {
     "husky": "^9.1.4"
