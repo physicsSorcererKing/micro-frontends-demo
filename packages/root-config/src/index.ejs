@@ -32,8 +32,8 @@
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
   <script type="systemjs-importmap" src="http://localhost:9001/importmap.json"></script>
-
-  <!-- Add your organization's prod import map URL to this script's src  -->
+  <!-- for angular app-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.13.1/zone.min.js" integrity="sha512-+cWrFbFSw+41uXDoayGA63htnbwihSP7gbW5dwd7zK2lf7uvy0TmORZPtlWr/41sHRwSZTkO3Fav7bd8fvLiqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <!-- Add your organization's prod import map URL to this script's src  -->
 
   <% if (isLocal) { %>
     <script type="systemjs-importmap">
