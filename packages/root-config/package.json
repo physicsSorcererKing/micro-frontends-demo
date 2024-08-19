@@ -1,7 +1,7 @@
 {
   "name": "@psk/root-config",
   "scripts": {
-    "start": "webpack serve --env isLocal",
+    "dev": "webpack serve --env isLocal",
     "lint": "eslint src --ext js,ts",
     "lint-staged": "lint-staged",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
@@ -25,6 +25,7 @@
     "@types/webpack-env": "^1.18.5",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.9.0",

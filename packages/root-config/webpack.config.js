@@ -2,6 +2,8 @@ const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+require("dotenv").config();
+
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "psk";
   const defaultConfig = singleSpaDefaults({
@@ -21,6 +23,7 @@ module.exports = (webpackConfigEnv, argv) => {
           inject: false,
           template: "src/index.ejs",
           templateParameters: {
+            ...process.env,
             isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
             orgName,
           },

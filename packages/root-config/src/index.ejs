@@ -31,23 +31,22 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
-  <script type="systemjs-importmap" src="http://localhost:9001/importmap.json"></script>
+  <script type="systemjs-importmap" src="<%= IMPORTMAP_URL %>"></script>
+
   <!-- for angular app-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.13.1/zone.min.js" integrity="sha512-+cWrFbFSw+41uXDoayGA63htnbwihSP7gbW5dwd7zK2lf7uvy0TmORZPtlWr/41sHRwSZTkO3Fav7bd8fvLiqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <!-- Add your organization's prod import map URL to this script's src  -->
 
-  <% if (isLocal) { %>
-    <script type="systemjs-importmap">
-      {
-        "imports": {
-          "@psk/root-config": "//localhost:9000/psk-root-config.js",
-          "@psk/app-header-react": "//localhost:9010/psk-app-header-react.js",
-          "@psk/app-nav-vue": "//localhost:9020/app.js",
-          "@psk/app-main-angular": "//localhost:9030/main.js",
-          "@psk/app-footer-svelte": "http://localhost:9040/psk-app-footer-svelte.js"
-        }
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@psk/root-config": "<%= ROOT_CONFIG_URL %>",
+        "@psk/app-header-react": "<%= HEADER_URL %>",
+        "@psk/app-nav-vue": "<%= NAV_URL %>",
+        "@psk/app-main-angular": "<%= MAIN_URL %>",
+        "@psk/app-footer-svelte": "<%= FOOTER_URL %>"
       }
-    </script>
-  <% } %>
+    }
+  </script>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
