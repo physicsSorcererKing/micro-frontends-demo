@@ -1,10 +1,13 @@
 {
   "name": "@psk/app-header-react",
   "scripts": {
-    "start": "webpack serve",
-    "start:standalone": "webpack serve --env standalone",
-    "build": "concurrently pnpm:build:*",
-    "build:webpack": "webpack --mode=production",
+    "dev": "webpack serve --env standalone",
+    "dev:i": "webpack serve",
+    "build": "concurrently pnpm:build:types pnpm:build:standalone",
+    "build:i": "concurrently pnpm:build:types pnpm:build:integrated",
+    "build:types": "tsc",
+    "build:standalone": "webpack --mode=production --env standalone",
+    "build:integrated": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
     "lint": "eslint src --ext js,ts,tsx",
     "lint-staged": "lint-staged",
@@ -12,8 +15,7 @@
     "check-format": "prettier --check ",
     "test": "cross-env BABEL_ENV=test jest",
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
-    "coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "build:types": "tsc"
+    "coverage": "cross-env BABEL_ENV=test jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
