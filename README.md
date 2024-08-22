@@ -31,15 +31,25 @@ Navigate to the cloned directory and install all package dependencies using pnpm
 cd micro-frontends-demo
 pnpm install
 ```
-### 3. Build All Packages
+
+### 3. Serve All Packages in Development Mode
+Microfrontend apps will be served in standalone mode:
+
+```bash
+pnpm dev:all
+```
+Then open your browser and go to: http://localhost:9000/
+
+---
+## Production
+
+### 1. Build All Packages
 Microfrontend apps will be built in standalone mode:
 ```bash
 pnpm build:all
 ```
-### 4. Serve All Applications
+### 2. Preview All Applications
 ```bash
 pnpm serve:all
 ```
-
-### 5. Access the Application
-Open your browser and go to: http://localhost:9000/
+Then open your browser and go to: http://localhost:9000/

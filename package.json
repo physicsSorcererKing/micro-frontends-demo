@@ -3,6 +3,7 @@
   "author": "physicsSorcererKing",
   "license": "MIT",
   "scripts": {
+    "dev:all": "pnpm -r --parallel dev",
     "build:all": "pnpm -r --parallel build",
     "serve:all": "pnpm -r --parallel serve",
     "root-config": "pnpm --filter @psk/root-config",
