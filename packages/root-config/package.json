@@ -9,7 +9,6 @@
     "check-format": "prettier --check .",
     "build": "concurrently pnpm:build:*",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc",
     "serve": "serve dist -l 9000 --cors"
   },
   "devDependencies": {
