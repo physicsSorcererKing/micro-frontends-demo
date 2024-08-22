@@ -1,5 +1,3 @@
-@import './base.css';
-
 .single-spa-container[data-v-app] {
   max-width: 1280px;
   margin: 0 auto;

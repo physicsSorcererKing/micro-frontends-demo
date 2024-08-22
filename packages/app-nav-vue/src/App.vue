@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import './assets/base.css'
 import './assets/main.css'
 import LogoSVG from '@/assets/logo.svg'
 </script>
