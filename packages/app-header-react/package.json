@@ -43,7 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-no-relative-import-paths": "^1.5.5",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-hooks": "5.1.0-beta-26f2496093-20240514",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.0.1",
     "globals": "^15.9.0",

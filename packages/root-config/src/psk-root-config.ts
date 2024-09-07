@@ -16,5 +16,12 @@ const applications = constructApplications({
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);
-layoutEngine.activate();
-start();
+
+System.import("@psk/styleguide").then(() => {
+  const { gg } = require("@psk/styleguide");
+  console.log(gg);
+  // Activate the layout engine once the styleguide CSS is loaded
+
+  layoutEngine.activate();
+  start();
+});

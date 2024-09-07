@@ -40,6 +40,7 @@
     {
       "imports": {
         "@psk/root-config": "<%= ROOT_CONFIG_URL %>",
+        "@psk/styleguide": "<%= STYLEGUIDE_URL %>",
         "@psk/app-header-react": "<%= HEADER_URL %>",
         "@psk/app-nav-vue": "<%= NAV_URL %>",
         "@psk/app-main-angular": "<%= MAIN_URL %>",
@@ -69,7 +70,8 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <script>
-    System.import('@psk/root-config');
+    System.import('@psk/styleguide').then(()=>console.log('imported styleguide'));
+    System.import('@psk/root-config').then(()=>console.log('imported root-config'));
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
