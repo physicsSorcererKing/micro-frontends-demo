@@ -1,26 +1,42 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { IconBrandVue } from '@tabler/icons-vue'
 import './assets/base.css'
 import './assets/main.css'
-import LogoSVG from '@/assets/logo.svg'
 </script>
 
 <template>
-  <header>
-    <LogoSVG alt="Vue logo" class="logo" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="nav--container">
+    <div class="watermark">
+      <IconBrandVue size="120" color="#07070a" />
+      <p class="watermark--title">Vue Sidebar</p>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
 <style scoped>
+.nav--container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #07070a;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watermark--title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
 header {
   line-height: 1.5;
 }
