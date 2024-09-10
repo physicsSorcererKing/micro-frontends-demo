@@ -1,5 +1,6 @@
 {
   "name": "micro-frontends-demo",
+  "version": "0.1.0",
   "author": "physicsSorcererKing",
   "license": "MIT",
   "scripts": {
