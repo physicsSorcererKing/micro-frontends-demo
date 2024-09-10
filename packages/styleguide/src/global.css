@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#single-spa-application\:\@psk\/app-main-angular {
+    height: 100%;
+}

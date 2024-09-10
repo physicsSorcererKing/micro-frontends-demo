@@ -1,0 +1,10 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "types": ["@testing-library/jest-dom"]
+  },
+  "files": ["src/psk-app-header-react.tsx"],
+  "include": ["src/**/*"]
+}

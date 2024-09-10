@@ -1,0 +1,34 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <route default>
+    <application name="@psk/app-header-react"></application>
+    <div style="height: calc(100vh - 52px); display: flex">
+      <nav style="max-width: 320px; width: 320px">
+        <application name="@psk/app-nav-vue"></application>
+      </nav>
+      <div style="display: flex; flex-direction: column; flex: 1">
+        <div style="flex: 1">
+          <application name="@psk/app-main-angular"></application>
+        </div>
+        <application name="@psk/app-footer-svelte"></application>
+      </div>
+    </div>
+  </route>
+</single-spa-router>

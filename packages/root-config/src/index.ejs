@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>Micro Frontends Demo</title>
 
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
     browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
   -->
-  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+  <!--  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>-->
 
   <!--
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
@@ -31,28 +31,23 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
+  <script type="systemjs-importmap" src="<%= IMPORTMAP_URL %>"></script>
+
+  <!-- for angular app-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.13.1/zone.min.js" integrity="sha512-+cWrFbFSw+41uXDoayGA63htnbwihSP7gbW5dwd7zK2lf7uvy0TmORZPtlWr/41sHRwSZTkO3Fav7bd8fvLiqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <!-- Add your organization's prod import map URL to this script's src  -->
+
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "@psk/root-config": "<%= ROOT_CONFIG_URL %>",
+        "@psk/styleguide": "<%= STYLEGUIDE_URL %>",
+        "@psk/app-header-react": "<%= HEADER_URL %>",
+        "@psk/app-nav-vue": "<%= NAV_URL %>",
+        "@psk/app-main-angular": "<%= MAIN_URL %>",
+        "@psk/app-footer-svelte": "<%= FOOTER_URL %>"
       }
     }
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
-
-  <!-- Add your organization's prod import map URL to this script's src  -->
-  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
-
-  <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@psk/root-config": "//localhost:9000/psk-root-config.js"
-      }
-    }
-  </script>
-  <% } %>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -60,13 +55,13 @@
   -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@3.1.1/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.15.1/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.15.1/dist/extras/amd.js"></script>
   <% } else { %>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.15.1/s.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.15.1/extras/amd.min.js"></script>
   <% } %>
 
 </head>
@@ -75,7 +70,8 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <script>
-    System.import('@psk/root-config');
+    System.import('@psk/styleguide').then(()=>console.log('imported styleguide'));
+    System.import('@psk/root-config').then(()=>console.log('imported root-config'));
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
