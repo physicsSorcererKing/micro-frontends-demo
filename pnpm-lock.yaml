@@ -81,6 +81,9 @@ importers:
 
   packages/app-header-react:
     dependencies:
+      '@tabler/icons-react':
+        specifier: ^3.15.0
+        version: 3.15.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -2557,6 +2560,14 @@ packages:
 
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
+
+  '@tabler/icons-react@3.15.0':
+    resolution: {integrity: sha512-EXIedaHiM4XcdZ8ml3pZeo5p/jetpXbwhDq9Zv3UVM8E3YACSww9TfCtEv3iBI74NI7mNz7Uua2qpNwwWljarg==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.15.0':
+    resolution: {integrity: sha512-Pzo7g8znsCgCcnSLCfukEV+kcfr0/VjBoCLXJtrOtaY94gtvYjWC2hrKzazf511asUflRuk/+dxztdKYJgpe4g==}
 
   '@testing-library/dom@10.4.0':
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
@@ -10512,6 +10523,13 @@ snapshots:
       '@sinonjs/commons': 1.8.6
 
   '@socket.io/component-emitter@3.1.2': {}
+
+  '@tabler/icons-react@3.15.0(react@18.3.1)':
+    dependencies:
+      '@tabler/icons': 3.15.0
+      react: 18.3.1
+
+  '@tabler/icons@3.15.0': {}
 
   '@testing-library/dom@10.4.0':
     dependencies:
