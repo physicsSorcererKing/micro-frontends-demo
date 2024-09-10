@@ -1,5 +1,6 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
+const path = require("node:path");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
@@ -15,8 +16,18 @@ module.exports = (webpackConfigEnv, argv) => {
     externals.push("react", "react-dom");
   }
 
-  return merge(defaultConfig, {
+  const resultConfig = merge(defaultConfig, {
     externals,
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          include: [/node_modules/, /src/],
+          exclude: [/\.module\.css$/],
+          use: ["postcss-loader"],
+        },
+      ],
+    },
     devServer: {
       port: 9010,
       headers: {
@@ -24,4 +35,7 @@ module.exports = (webpackConfigEnv, argv) => {
       },
     },
   });
+
+  console.log(resultConfig.module.rules);
+  return resultConfig;
 };
