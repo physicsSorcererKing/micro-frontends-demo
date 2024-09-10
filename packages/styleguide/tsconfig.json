@@ -1,9 +1,10 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/psk-styleguide.ts"],
   "compilerOptions": {
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "types": ["@testing-library/jest-dom"]
   },
+  "files": ["src/psk-styleguide.ts"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }

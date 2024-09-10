@@ -15,7 +15,7 @@ const config = (webpackConfigEnv, argv) => {
       rules: [
         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader", "postcss-loader"],
+          use: ["postcss-loader"],
         },
       ],
     },
