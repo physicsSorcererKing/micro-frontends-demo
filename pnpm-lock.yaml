@@ -14,6 +14,9 @@ importers:
 
   packages/app-footer-svelte:
     dependencies:
+      '@tabler/icons-svelte':
+        specifier: ^3.15.0
+        version: 3.15.0(svelte@4.2.18)
       single-spa-svelte:
         specifier: ^2.1.1
         version: 2.1.1
@@ -2571,6 +2574,11 @@ packages:
     resolution: {integrity: sha512-EXIedaHiM4XcdZ8ml3pZeo5p/jetpXbwhDq9Zv3UVM8E3YACSww9TfCtEv3iBI74NI7mNz7Uua2qpNwwWljarg==}
     peerDependencies:
       react: '>= 16'
+
+  '@tabler/icons-svelte@3.15.0':
+    resolution: {integrity: sha512-ilY7gKEI44+dzaB/G24/8ezHczehQHYZJ/x0d+m9isyF74LsBsWDSTq0xpU4EWmOb/PvKegaRazlE/gRpmCeCg==}
+    peerDependencies:
+      svelte: '>=3 <6 || >=5.0.0-next.0'
 
   '@tabler/icons-vue@3.15.0':
     resolution: {integrity: sha512-C56PJxsGcK2ImIbHsQcvxxNWmEW7ERT4AxWBx3CfaUqIvV3RrV+pi9X48GJZXycJvZ8OlK9VBL/pw201TxynyQ==}
@@ -10545,6 +10553,11 @@ snapshots:
     dependencies:
       '@tabler/icons': 3.15.0
       react: 18.3.1
+
+  '@tabler/icons-svelte@3.15.0(svelte@4.2.18)':
+    dependencies:
+      '@tabler/icons': 3.15.0
+      svelte: 4.2.18
 
   '@tabler/icons-vue@3.15.0(vue@3.4.38(typescript@5.4.5))':
     dependencies:
