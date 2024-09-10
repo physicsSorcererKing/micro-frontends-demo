@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "angular-tabler-icons": "^3.1.0",
     "rxjs": "~7.8.1",
     "single-spa": "^6.0.1",
     "single-spa-angular": "^9.1.2",
@@ -41,5 +42,11 @@
     "serve": "^14.2.3",
     "style-loader": "^3.3.4",
     "typescript": "~5.5.4"
+  },
+  "overrides": {
+    "angular-tabler-icons": {
+      "@angular/common": "^18.0.0",
+      "@angular/core": "^18.0.0"
+    }
   }
 }
